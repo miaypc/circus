@@ -1,16 +1,16 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const app = express();
 const path = require("path");
-
 const routes = require("./routes/");
 const MONGO_URI = process.env.F || "mongodb://localhost/circus";
 
 app.use(express.static(path.join(__dirname, "client/build")));
 
 const connect = () => {
-  return mongoose.connect(MONGO_URI, {
+  return mongoose.connect("MONGO_URI", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
