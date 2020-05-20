@@ -45,7 +45,7 @@ function BookingPage() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("handleSubmit!!!!", event);
-    fetch("/booking", {
+    fetch("/api/booking", {
       headers: {
         "Content-Type": "application/json",
       },
