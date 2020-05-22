@@ -6,6 +6,7 @@ const app = express();
 const path = require("path");
 const routes = require("./routes");
 const MONGO_URI = process.env.MONGO_URL || "mongodb://localhost/circus";
+const PORT = process.env.PORT || 5000;
 
 app.use(express.static(path.join(__dirname, "client/build")));
 
@@ -24,7 +25,6 @@ app.use(express.static(path.join(__dirname, "client", "build")));
 // /booking
 
 connect();
-const PORT = process.env.PORT || 5000;
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
