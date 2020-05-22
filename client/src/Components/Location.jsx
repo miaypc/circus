@@ -1,5 +1,4 @@
 import React from "react";
-import Map from "../Img/Map.png";
 import styled from "styled-components";
 import _Button from "@material-ui/core/Button";
 
@@ -28,7 +27,11 @@ function Location() {
       </h1>
       <Div>
         <a href="https://www.google.de/maps/place/Wild+Code+School+Berlin/@52.5521708,13.354686,14.95z/data=!4m5!3m4!1s0x47a853f8fe23d85d:0xd410928c8b9d0f69!8m2!3d52.5533001!4d13.3604992">
-          <img src={Map} alt="Map" style={{ maxHeight: "300px" }} />
+          <img
+            src="https://img.freepik.com/free-photo/magnifying-glass-germany-map_90781-230.jpg?size=626&ext=jpg"
+            alt="Map"
+            style={{ maxHeight: "300px", borderRadius: "50px" }}
+          />
         </a>
         <ButtonContainer>
           <a
